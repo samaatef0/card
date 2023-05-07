@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=La+Belle+Aurore&family=Roboto:wght@400;500&family=Water+Brush&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+ font-family: 'Roboto' , sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: blueviolet;
+
+}
+
+.container .card {
+    background-color: white;
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px 6px rgba(0, 0, 0, 0.2);
+    display: flex;
+    min-height: 200px;
+    justify-content: center;
+    align-items: center;
+}
+.container .card .image {
+    position: relative;
+}
+
+.container .card .image::before {
+    content: '';
+    width: 300px;
+    height: 300px;
+    background-color: white;
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+}
+.container .card img {
+    width: 280px;
+    
+}
+
+.container .card .details  h2{
+ font-weight: bolder;
+ font-size: 20px ;
+}
+
+.container .card .details  h2.discount{
+    margin-bottom: 10px;
+    color: #e74c3c;
+    font-size: 50px;
+}
+
+.container .card .details  h2.discount span {
+    color: black;
+    text-transform: uppercase;
+    font-size: 60px;
+}
+
+.container .card .details p {
+    line-height: 1.7em;
+    margin-bottom: 15px;
+
+}
+
+.container .card .details  button {
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    background-color: #e74c3c;
+    color: white;
+}
+
+@media screen and (max-width: 980px) {
+    .container .card {
+        display: block;
+        top: 55%;
+    }
+    
+    .container .card .image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(-40%);
+        height: 200px;
+    }
+
+    .container .card .image::before {
+        top: -20%;
+    }
+
+    .container .card .details {
+        text-align: center;
+    }
+    
+}
